@@ -23,6 +23,13 @@ while True:
         name = "Unknown"
         if True in matches:
             name = "Authorized Person"
+        # Draw a box around the face
+        cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
+        cv2.putText(frame, name, (left, top-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 255, 255), 2)
+
+    cv2.imshow('Face Recognition', frame)
+
+
 
 
 
