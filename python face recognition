@@ -28,6 +28,12 @@ while True:
         cv2.putText(frame, name, (left, top-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 255, 255), 2)
 
     cv2.imshow('Face Recognition', frame)
+    if cv2.waitKey(1) & 0xFF == 27:  # ESC key to quit
+        break
+
+video_capture.release()
+cv2.destroyAllWindows()
+
 
 
 
