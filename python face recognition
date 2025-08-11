@@ -21,6 +21,9 @@ while True:
     for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
         matches = face_recognition.compare_faces([known_encoding], face_encoding)
         name = "Unknown"
+        if True in matches:
+            name = "Authorized Person"
+
 
 
 
